@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg"
+    android:padding="16dp"
+    tools:context=".Approvals_Activity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_btn"
+            android:layout_alignParentStart="true"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIHARIKA ENTERPRISES"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Profile/Role -->
+        <TextView
+            android:id="@+id/profileRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Logout Button -->
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/power_btn"
+            android:layout_alignParentEnd="true"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Search and Filter -->
+    <LinearLayout
+        android:id="@+id/searchFilterLayout"
+        android:layout_below="@id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/searchJob"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:padding="10dp"
+            android:background="@drawable/input_background"
+            android:drawableStart="@drawable/search_ic"
+            android:drawablePadding="8dp" />
+
+        <ImageView
+            android:id="@+id/filterButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/filter_ic"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Scrollable Job List -->
+    <ScrollView
+        android:id="@+id/jobListScroll"
+        android:layout_below="@id/searchFilterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- One Card -->
+            <include layout="@layout/approval_card"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

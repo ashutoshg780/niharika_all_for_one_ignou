@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "430569051497",
+    "project_id": "niharikaallforone",
+    "storage_bucket": "niharikaallforone.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430569051497:android:df3901eb9c641ffe4dd9f8",
+        "android_client_info": {
+          "package_name": "com.example.niharika_all_for_one"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBezQ3PV7yT1HA3BcdOdFBpl2aysyEWMng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

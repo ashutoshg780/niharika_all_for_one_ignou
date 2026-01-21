@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <style name="Theme.Niharika_All_For_One" parent="android:Theme.Material.Light.NoActionBar" />-->
+
+    <style name="Theme.Niharika_All_For_One" parent="Theme.AppCompat.DayNight.NoActionBar"/>
+<!--    <style name="Theme.Niharika_All_For_One.z" parent="Theme.MaterialComponents.Light.NoActionBar"/>-->
+
+
+    <!--    <style name="Main_Frame">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">250dp</item>-->
+<!--        <item name="android:background">@drawable/logobar</item>-->
+<!--    </style>-->
+
+<!--    <style name="Main_Frame_Back">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_marginStart">10dp</item>-->
+<!--        <item name="android:layout_marginTop">10dp</item>-->
+<!--        <item name="android:layout_marginEnd">10dp</item>-->
+<!--        <item name="android:layout_marginBottom">10dp</item>-->
+<!--        <item name="android:background">@android:color/transparent</item>-->
+<!--        <item name="android:minWidth">48dp</item>-->
+<!--        <item name="android:minHeight">48dp</item>-->
+<!--        <item name="android:padding">10dp</item>-->
+<!--        <item name="android:src">@drawable/main_frame_back_btn</item>-->
+<!--        <item name="android:contentDescription">@string/todo</item>-->
+<!--    </style>-->
+
+<!--    <style name="Main_Frame_Icon">-->
+<!--        <item name="android:layout_width">170dp</item>-->
+<!--        <item name="android:layout_height">160dp</item>-->
+<!--        <item name="android:layout_centerHorizontal">true</item>-->
+<!--        <item name="android:layout_marginTop">40dp</item>-->
+<!--        <item name="android:src">@drawable/logo</item>-->
+<!--    </style>-->
+
+<!--    <style name="Main_Frame_Heading">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--&lt;!&ndash;        <item name="android:layout_below">@id/Iconmainframe</item>&ndash;&gt;-->
+<!--        <item name="android:layout_centerHorizontal">true</item>-->
+<!--        <item name="android:layout_marginTop">-20dp</item>-->
+<!--        <item name="android:fontFamily">sans-serif-condensed</item>-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:textSize">28sp</item>-->
+<!--    </style>-->
+
+
+
+
+</resources>

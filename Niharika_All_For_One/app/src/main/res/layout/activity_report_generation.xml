@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg"
+    android:padding="16dp"
+    tools:context=".Spare_Parts_Job_Activity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_btn"
+            android:layout_alignParentStart="true"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIHARIKA ENTERPRISES"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Profile/Role -->
+        <TextView
+            android:id="@+id/profileRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager -1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Logout Button -->
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/power_btn"
+            android:layout_alignParentEnd="true"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content (entire screen above button) -->
+    <ScrollView
+        android:id="@+id/scrollArea"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@id/btnGenerateReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- Period Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Period"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:text="Day" android:textColor="#FFFFFF"/>
+                <RadioButton android:text="Week" android:checked="true" android:textColor="#FFFFFF"/>
+                <RadioButton android:text="Month" android:textColor="#FFFFFF"/>
+                <RadioButton android:text="Custom" android:textColor="#FFFFFF"/>
+            </RadioGroup>
+
+            <!-- Date Range Inputs -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/input_background"
+                    android:text="01-02-2024"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/input_background"
+                    android:text="01-02-2024"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Report Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report off"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:text="Complaints" android:textColor="#FFFFFF"/>
+                <RadioButton android:text="Make" android:checked="true" android:textColor="#FFFFFF"/>
+                <RadioButton android:text="Spare Parts" android:textColor="#FFFFFF"/>
+                <RadioButton android:text="Billing" android:textColor="#FFFFFF"/>
+            </RadioGroup>
+
+            <!-- Make Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/input_background"
+                    android:text="CRI"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Report Table Scroll (horizontal inside vertical) -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:backgroundTint="#FFC107"
+                    android:background="@drawable/input_background"
+                    android:padding="8dp">
+
+                    <!-- Table Header -->
+                    <TableRow>
+                        <TextView android:text="Job Id" android:padding="8dp" android:textColor="#000" android:textStyle="bold" />
+                        <TextView android:text="Date" android:padding="8dp" android:textColor="#000" android:textStyle="bold" />
+                        <TextView android:text="Customer Name" android:padding="8dp" android:textColor="#000" android:textStyle="bold" />
+                        <TextView android:text="Make" android:padding="8dp" android:textColor="#000" android:textStyle="bold" />
+                        <TextView android:text="Spare Parts Used" android:padding="8dp" android:textColor="#000" android:textStyle="bold" />
+                        <TextView android:text="Cost" android:padding="8dp" android:textColor="#000" android:textStyle="bold" />
+                    </TableRow>
+
+                    <!-- Sample Row (can repeat via code) -->
+                    <TableRow>
+                        <TextView android:text="101" android:padding="8dp" android:textColor="#000" />
+                        <TextView android:text="01-02-2024" android:padding="8dp" android:textColor="#000" />
+                        <TextView android:text="Aman" android:padding="8dp" android:textColor="#000" />
+                        <TextView android:text="CRI" android:padding="8dp" android:textColor="#000" />
+                        <TextView android:text="MCR, KT" android:padding="8dp" android:textColor="#000" />
+                        <TextView android:text="750" android:padding="8dp" android:textColor="#000" />
+                    </TableRow>
+
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Generate Report Button (Fixed Bottom) -->
+    <Button
+        android:id="@+id/btnGenerateReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Report"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFFFFF"
+        android:background="@color/green_500"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg"
+    android:layout_alignParentTop="true"
+    tools:context=".Update_Job_Engineer_Workshop_Activity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_btn"
+            android:layout_alignParentStart="true"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIHARIKA ENTERPRISES"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/profileRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager -1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"/>
+        <!--android:marginTop="4dp" />-->
+
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/power_btn"
+            android:layout_alignParentEnd="true"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- JOBID -->
+            <TextView
+                android:id="@+id/tvJOBID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:padding="12dp" />
+
+            <!-- Customer Name -->
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Customer Name"
+                android:background="#999999"
+                android:layout_below="@+id/tvJOBID"
+                android:padding="10dp" />
+
+            <!-- Purchase Date Heading -->
+            <TextView
+                android:id="@+id/headPurchaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purchase Date"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_below="@+id/tvCustomerName"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Purchase Date -->
+            <Button
+                android:id="@+id/btnPurchaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="02-02-2025"
+                android:background="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/headPurchaseDate"
+                android:enabled="false"
+                android:padding="10dp"
+                android:alpha="0.6" />
+
+            <!-- Warranty Status Heading -->
+            <TextView
+                android:id="@+id/headWarrantyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warranty Status Update"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_below="@+id/btnPurchaseDate"
+                android:layout_marginTop="12dp" />
+
+            <!-- Warranty Status Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radioWarrantyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headWarrantyStatus"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbInWarranty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In Warranty" />
+
+                <RadioButton
+                    android:id="@+id/rbOutOfWarranty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Out of Warranty"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+
+            <!-- Pump Problem/Issue Update Heading -->
+            <TextView
+                android:id="@+id/headPumpIssueUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pump Problem/Issue Update"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_below="@id/radioWarrantyStatus"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Pump Problem/Issue Check box -->
+            <GridLayout
+                android:id="@+id/cbPumpIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="6"
+                android:layout_below="@+id/headPumpIssueUpdate"
+                android:layout_marginTop="4dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_turning_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turning on"
+                    android:checked="true"
+                    android:textColor="#FFFFFF"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_water_not_pumping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Water not pumping"
+                    android:checked="false"
+                    android:textColor="#FFFFFF"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_low_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Low pressure"
+                    android:checked="true"
+                    android:textColor="#FFFFFF"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_high_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High pressure"
+                    android:checked="false"
+                    android:textColor="#FFFFFF"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_auto_turn_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto turn off"
+                    android:checked="false"
+                    android:textColor="#FFFFFF"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_start_takes_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start takes time"
+                    android:checked="false"
+                    android:textColor="#FFFFFF"/>
+
+                <!--Issue Description -->
+                <EditText
+                    android:id="@+id/taIssueDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Issue Description"
+                    android:layout_columnSpan="2"
+                    android:layout_row="3"
+                    android:layout_gravity="fill"
+                    android:inputType="textMultiLine"
+                    android:drawableEnd="@drawable/ic_mic"
+                    android:padding="8dp"/>
+            </GridLayout>
+
+            <!-- Repair Status Update -->
+            <TextView
+                android:id="@+id/headRepairStatusUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next-Day Repair"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_below="@id/cbPumpIssue"
+                android:layout_marginTop="12dp" />
+
+            <!-- Complaint Type Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radioRepairStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headRepairStatusUpdate"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Needed" />
+
+                <RadioButton
+                    android:id="@+id/rbNotNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not-Needed"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+
+            <!-- Need Another Engineer Heading -->
+            <TextView
+                android:id="@+id/headNeedAnotherEngineer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need Another Engineer"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_below="@+id/radioRepairStatus"
+                android:layout_marginTop="12dp" />
+
+            <!-- Need Another Engineer Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radioAnotherEngineer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headNeedAnotherEngineer"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbEngNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Needed" />
+
+                <RadioButton
+                    android:id="@+id/rbEngNotNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not-Needed"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+
+            <!-- Make and SL No -->
+            <EditText
+                android:id="@+id/dataMake"
+                android:hint="Make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_camera"
+                android:layout_below="@+id/radioAnotherEngineer"
+                android:inputType="textCapCharacters|textNoSuggestions" />
+
+            <EditText
+                android:id="@+id/dataSLNo"
+                android:hint="SL No"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_camera"
+                android:layout_below="@+id/dataMake"
+                android:inputType="textCapCharacters|textNoSuggestions" />
+
+            <!-- Field and Spare parts Pictures Heading -->
+            <TextView
+                android:id="@+id/headImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Field and Spare parts Pictures"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_below="@id/dataSLNo"
+                android:layout_marginTop="12dp" />
+
+            <!-- 📸 Photo Section Grid for Uploading Images -->
+            <GridLayout
+                android:id="@+id/uploadImag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/headImages">
+
+                <!-- CARD 1: Pump Received -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Pump Received"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 2: Accessories with Pump -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Accessories with Pump"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 3: Faulty Part #1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Faulty Part #1"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 4: Faulty Part #2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Faulty Part #2"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 5: Spare Part Used #1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Spare Part Used #1"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 6: Spare Part Used #2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Spare Part Used #2"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 7: Spare Part Used #3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Spare Part Used #3"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 8: Other / Optional -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Other / Optional"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 9: Pump Handover -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:text="Pump Handover"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 📄 Spare Parts Description (spanning full width) -->
+                <EditText
+                    android:id="@+id/taSparePartsDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Spare Parts Used"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="fill_horizontal"
+                    android:inputType="textMultiLine"
+                    android:drawableEnd="@drawable/ic_mic"
+                    android:padding="8dp"/>
+            </GridLayout>
+
+
+            <!-- Update Job Button -->
+            <Button
+                android:id="@+id/btnUpdateJob"
+                android:text="Update Job"
+                android:background="#FF5722"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadImag"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

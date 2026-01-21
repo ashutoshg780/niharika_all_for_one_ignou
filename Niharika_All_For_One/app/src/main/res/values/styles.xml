@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="CardText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+
+
+<!--    <style name="CardText">-->
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+<!--        <item name="android:textSize">15sp</item>-->
+<!--        <item name="android:layout_marginBottom">4dp</item>-->
+<!--    </style>-->
+
+    <style name="ApproveButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#4CAF50</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="RejectButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#F44336</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="EditButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#2196F3</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+</resources>

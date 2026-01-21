@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_in_Activity"
+    android:padding="20dp"
+    android:background="@drawable/main_frame_bg">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIHARIKA ENTERPRISES"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- App Logo -->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/app_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="15dp" />
+
+    <!-- Full Name -->
+    <EditText
+        android:id="@+id/et_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Employe ID"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/usser_ic"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/app_logo"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:maxLength="10"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/et_full_name"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"/>
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/et_password"/>
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:background="@drawable/background_button"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tv_forgot_password"
+        android:layout_marginTop="20dp"/>
+
+
+    <!-- Create Account -->
+    <TextView
+        android:id="@+id/signuppg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="20dp"
+        android:text="New to Niharika ALL For One? Create an Account"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:clickable="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>
