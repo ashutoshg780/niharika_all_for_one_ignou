@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg"
+    android:padding="16dp"
+    tools:context=".Job_Status_Activity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_btn"
+            android:layout_alignParentStart="true"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIHARIKA ENTERPRISES"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Profile/Role -->
+        <TextView
+            android:id="@+id/profileRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Logout Button -->
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/power_btn"
+            android:layout_alignParentEnd="true"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Scrollable Job Details -->
+    <ScrollView
+        android:id="@+id/jobListScroll"
+        android:layout_below="@id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Left Section (Details + Buttons) -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp">
+
+                <!-- Job Detail Box -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFC107"
+                    android:background="@drawable/input_background"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/jobDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Complaint Person: Aman Sha\nComplaint no 4122\nAssigned to: Sharukh\nComplaint Date: 06-02-2025\nCompletion Date: 12-02-2025\nWarranty Status: In Warranty\nComplain method: Wall-in\nComplain type: Field\nMake: CRI\nPump SL no: 2241\nPayment: In-Warranty\nCustomer type: Regular"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <!-- Icons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp">
+
+                        <!-- Edit Job -->
+                        <ImageView
+                            android:id="@+id/editButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/edit_ic"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Send Whatsapp Notification -->
+                        <ImageView
+                            android:id="@+id/notificationButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/notifications_ic"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Call -->
+                        <ImageView
+                            android:id="@+id/callButton"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/phone_ring" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- Action Buttons -->
+
+                <!--  Sapir parts used Button -->
+                <Button
+                    android:id="@+id/btnPartsUsed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sapir Pats Used"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/green_500"
+                    android:layout_marginBottom="12dp" />
+
+                <!--  Update Repair Status Button -->
+
+                <Button
+                    android:id="@+id/btnUpdateRepair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/green_500"
+                    android:text="Update Repair Status"
+                    android:textColor="#FFFFFF" />
+
+                <!--  Detailed Bill Button -->
+                <Button
+                    android:id="@+id/btnDetailedBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detailed Bill"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/green_500"
+                    android:layout_marginBottom="12dp" />
+
+                <!--  End/ Reopen Button -->
+                <Button
+                    android:id="@+id/btnEndReopen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End/ Reopen"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/green_500"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+            <!-- Timeline -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|top">
+
+                <View
+                    android:id="@+id/circle1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_green"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:background="#8BC34A"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/circle2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_green"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:background="#8BC34A"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/circle3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_yellow"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:background="#FFB74D"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/circle4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_gray"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:background="#BDBDBD"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/circle5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_gray"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutFieldUpdate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- 👷 Engineer Role & Name -->
+    <GridLayout
+        android:id="@+id/glEngineerRoleName_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <TextView
+            android:id="@+id/tvEngineerRole_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role: " />
+
+        <TextView
+            android:id="@+id/tvEngineerRoledsp_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tvEngineerName_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Name: " />
+
+        <TextView
+            android:id="@+id/tvEngineerNamedsp_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </GridLayout>
+
+    <!-- 🕒 Job Received Date and Time -->
+    <TextView
+        android:id="@+id/tvJobReciveDateTimeTitle_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Received Date and Time"
+        android:layout_below="@+id/glEngineerRoleName_field"
+        android:layout_marginTop="12dp" />
+
+    <GridLayout
+        android:id="@+id/glJobReciveDateandTime_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJobReciveDateTimeTitle_field"
+        android:columnCount="4"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: " />
+
+        <TextView
+            android:id="@+id/receiveDate_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Time: " />
+
+        <TextView
+            android:id="@+id/receiveTime_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </GridLayout>
+
+    <!-- 🕒 Job Handover Date and Time -->
+    <TextView
+        android:id="@+id/tvJobHandoverDateTimeTitle_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Handover Date and Time"
+        android:layout_below="@id/glJobReciveDateandTime_field"
+        android:layout_marginTop="12dp" />
+
+    <GridLayout
+        android:id="@+id/glJobHandoverDateandTime_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJobHandoverDateTimeTitle_field"
+        android:columnCount="4"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: " />
+
+        <TextView
+            android:id="@+id/handoverDate_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Time: " />
+
+        <TextView
+            android:id="@+id/handoverTime_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </GridLayout>
+
+    <!-- 🧾 Warranty Status -->
+    <TextView
+        android:id="@+id/headWarrantyStatus_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warranty Status"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/glJobHandoverDateandTime_field"
+        android:layout_marginTop="12dp" />
+
+    <RadioGroup
+        android:id="@+id/radioWarrantyStatus_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headWarrantyStatus_field"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbInWarranty_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Warranty" />
+
+        <RadioButton
+            android:id="@+id/rbOutOfWarranty_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out of Warranty"
+            android:layout_marginStart="16dp" />
+    </RadioGroup>
+
+    <!-- 📋 Pump Problem/Issue Heading -->
+    <TextView
+        android:id="@+id/headPumpIssueUpdate_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pump Problem/Issue Update"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/radioWarrantyStatus_field"
+        android:layout_marginTop="12dp" />
+
+    <GridLayout
+        android:id="@+id/cbPumpIssue_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_below="@+id/headPumpIssueUpdate_field"
+        android:layout_marginTop="4dp">
+
+        <!-- Reuse existing checkbox IDs but with _field suffix -->
+        <CheckBox
+            android:id="@+id/checkbox_turning_on_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turning on"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkbox_water_not_pumping_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water not pumping"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkbox_low_pressure_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low pressure"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkbox_high_pressure_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High pressure"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkbox_auto_turn_off_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auto turn off"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkbox_start_takes_time_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start takes time"
+            android:textColor="#FFFFFF" />
+
+        <!-- 📝 Issue Description -->
+        <EditText
+            android:id="@+id/taIssueDescription_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:inputType="textMultiLine"
+            android:hint="Enter your comments"
+            android:padding="8dp" />
+    </GridLayout>
+
+    <!-- 🧭 Repair Flow Controls -->
+    <TextView
+        android:id="@+id/headRepairStatusUpdate_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is Next-Day Repair Required?"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/cbPumpIssue_field"
+        android:layout_marginTop="12dp" />
+
+    <RadioGroup
+        android:id="@+id/radioRepairStatus_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headRepairStatusUpdate_field"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbNeeded_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Needed" />
+
+        <RadioButton
+            android:id="@+id/rbNotNeeded_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not-Needed"
+            android:layout_marginStart="16dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/headNeedAnotherEngineer_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do You Need Another Engineer?"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/radioRepairStatus_field"
+        android:layout_marginTop="12dp" />
+
+    <RadioGroup
+        android:id="@+id/radioAnotherEngineer_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headNeedAnotherEngineer_field"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbEngNeeded_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Needed" />
+
+        <RadioButton
+            android:id="@+id/rbEngNotNeeded_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not-Needed"
+            android:layout_marginStart="16dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/headWorkshopRepair_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is Workshop Repair Required?"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/radioAnotherEngineer_field"
+        android:layout_marginTop="12dp" />
+
+    <RadioGroup
+        android:id="@+id/radioWorkshop_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headWorkshopRepair_field"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbWorkshopNeeded_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Needed" />
+
+        <RadioButton
+            android:id="@+id/rbWorkshopNotNeeded_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not-Needed"
+            android:layout_marginStart="16dp" />
+    </RadioGroup>
+
+    <!-- 🛠️ Make & SL No -->
+    <EditText
+        android:id="@+id/dataMake_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Make"
+        android:drawableEnd="@drawable/ic_camera"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:layout_below="@id/radioWorkshop_field" />
+
+    <EditText
+        android:id="@+id/dataSLNo_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SL No"
+        android:drawableEnd="@drawable/ic_camera"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:layout_below="@id/dataMake_field" />
+    <!-- 📸 Field Engineer Photo Upload Section (9 images max) -->
+    <TextView
+        android:id="@+id/headImages_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Field and Spare parts Pictures"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/dataSLNo_field" />
+
+    <GridLayout
+        android:id="@+id/uploadImag_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headImages_field"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- CARD TEMPLATE -->
+        <!-- Repeat this block for each photo card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg1_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Pump Received"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Repeat the same block with updated card IDs and titles below: -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg2_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Accessories with Pump"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg3_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Site Overview"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg4_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Faulty Parts"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg5_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Spare Part Used #1"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg6_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Spare Part Used #2"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg7_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Spare Part Used #3"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg8_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Other / Optional"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImg9_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:text="Pump Handover"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</RelativeLayout>

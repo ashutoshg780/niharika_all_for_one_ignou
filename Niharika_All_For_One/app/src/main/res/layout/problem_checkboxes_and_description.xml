@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cbPumpIssue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="6"
+    android:layout_marginTop="4dp">
+
+    <CheckBox
+        android:id="@+id/checkbox_turning_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turning on"
+        android:checked="false"
+        android:textColor="#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_water_not_pumping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water not pumping"
+        android:checked="false"
+        android:textColor="#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_low_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Low pressure"
+        android:checked="false"
+        android:textColor="#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_high_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High pressure"
+        android:checked="false"
+        android:textColor="#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_auto_turn_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto turn off"
+        android:checked="false"
+        android:textColor="#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_start_takes_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start takes time"
+        android:checked="false"
+        android:textColor="#FFFFFF"/>
+
+    <!-- ✍️ Issue Description -->
+    <EditText
+        android:id="@+id/taIssueDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Issue Description"
+        android:layout_columnSpan="2"
+        android:layout_row="3"
+        android:layout_gravity="fill"
+        android:inputType="textMultiLine"
+        android:padding="8dp"/>
+</GridLayout>

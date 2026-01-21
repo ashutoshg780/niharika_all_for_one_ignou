@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Let the system know camera is optional -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        tools:targetApi="36">
+        <activity
+            android:name=".Dashboard"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".Approvals_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Customer_List_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Report_Generation_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Detailed_Bill_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Payouts_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Attendance_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Price_History_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Price_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Order_History_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Order_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Stock_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Job_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Spare_Parts_Used_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Edit_Job_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Job_Status_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Jobs_List_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".ID_Complete_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".ID_Status_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Update_Job_Engineer_Workshop_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Update_Job_Engineer_Field_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".New_Job_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Forget_Password_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Profile_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Dashboard_SuperAdmin_or_Owner_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Dashboard_Admin_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Dashboard_Engineer_Field_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Dashboard_Engineer_Workshop_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Dashboard_Manager_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Sign_in_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Sign_up_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Start_Screen_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Niharika_All_For_One" />
+        <activity
+            android:name=".Splash_Activity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Niharika_All_For_One">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

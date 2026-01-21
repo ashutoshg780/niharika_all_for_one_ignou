@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Niharika_All_For_One</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone No</string>
+    <string name="password">Password</string>
+    <string name="cnfpassword">Confirm Password</string>
+    <string name="username">User Name</string>
+    <string name="register">REGISTER</string>
+    <string name="todo">TODO</string>
+    <string name="create_account">Create Account</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string-array name="role_options">
+        <item>Select Role</item> <!-- Default Option -->
+        <item>Manager</item>
+        <item>Engineer (Workshop)</item>
+        <item>Engineer (Field)</item>
+        <item>Admin</item>
+    </string-array>
+
+</resources>

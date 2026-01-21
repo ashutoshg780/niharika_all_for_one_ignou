@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg"
+    android:padding="24dp"
+    tools:context=".ID_Status_Activity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIHARIKA ENTERPRISES"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- App Logo -->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/app_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="15dp" />
+
+    <!-- Full Name -->
+    <EditText
+        android:id="@+id/et_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Employe ID"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/usser_ic"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/app_logo"
+        android:layout_marginTop="15dp"
+        android:inputType="phone"
+        android:maxLength="10"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/et_full_name"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"/>
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/et_password"/>
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Check Status"
+        android:background="@drawable/background_button"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tv_forgot_password"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Timeline and Labels -->
+    <LinearLayout
+        android:id="@+id/stepLayout"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Timeline -->
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center|top"
+            android:layout_marginEnd="16dp">
+
+            <!-- Step 1 -->
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_green"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="#8BC34A"
+                android:layout_gravity="center" />
+
+            <!-- Step 2 -->
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_green"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="#8BC34A"
+                android:layout_gravity="center" />
+
+            <!-- Step 3 -->
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_yellow"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="#FFB74D"
+                android:layout_gravity="center" />
+
+            <!-- Step 4 -->
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_gray"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- Labels -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="47dp"
+                android:text="Registered WithPhone No/ Password"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="47dp"
+                android:text="Role Assigned"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="47dp"
+                android:text="Verification Pending"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Created"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

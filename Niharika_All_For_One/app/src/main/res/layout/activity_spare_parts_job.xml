@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame_bg"
+    android:padding="16dp"
+    tools:context=".Spare_Parts_Job_Activity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back_btn"
+            android:layout_alignParentStart="true"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIHARIKA ENTERPRISES"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Profile/Role -->
+        <TextView
+            android:id="@+id/profileRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager -1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Logout Button -->
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/power_btn"
+            android:layout_alignParentEnd="true"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Scrollable Job Details -->
+    <ScrollView
+        android:id="@+id/jobListScroll"
+        android:layout_below="@id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- JOBID -->
+            <TextView
+                android:id="@+id/tvJOBID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:padding="10dp" />
+
+            <!-- Dynamic Spare Parts Table Layout -->
+            <TableLayout
+                android:id="@+id/sparePartsTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/input_background"
+                android:padding="16dp"
+                android:backgroundTint="#FFC107"
+                android:stretchColumns="0,1,2">
+
+                <!-- Header Row -->
+                <TableRow>
+
+                    <!-- Section 1: 16.5% width for Item Code -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.65"
+                        android:text="Item Code"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:padding="8dp" />
+
+                    <!-- Section 2: 58.5% width for Item Name -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5.85"
+                        android:text="Item"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:padding="8dp" />
+
+                    <!-- Section 3: 25% width for Quantity -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:text="Quantity"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:padding="8dp" />
+
+                </TableRow>
+
+                <!-- Dynamic rows will be added below this by Kotlin code -->
+
+            </TableLayout>
+
+            <!-- Buttons Section -->
+
+            <!-- Price List Button -->
+            <Button
+                android:id="@+id/btnPriceList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price List"
+                android:textColor="#FFFFFF"
+                android:background="@color/green_500"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Add/Remove Button -->
+            <Button
+                android:id="@+id/btnAddRemove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add/ Remove"
+                android:textColor="#FFFFFF"
+                android:background="@color/green_500"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Spare Parts Stock Button -->
+            <Button
+                android:id="@+id/btnStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@color/green_500"
+                android:text="Sapir Pats Stock"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

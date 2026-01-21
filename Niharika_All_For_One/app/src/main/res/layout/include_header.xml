@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- 👤 Profile Photo button -->
+    <ImageView
+        android:id="@+id/profileBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/circle_border_green"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_profile" />
+
+    <!-- 🏢 Fixed Company Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIHARIKA ENTERPRISES"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+
+    <!-- 👨‍💼 Dynamic Name + Role will show here -->
+    <TextView
+        android:id="@+id/profileRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Owner"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <!-- 🚪 Logout Button -->
+    <ImageView
+        android:id="@+id/logoutButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/power_btn"
+        android:layout_alignParentEnd="true"
+        app:tint="#FFFFFF" />
+</RelativeLayout>
